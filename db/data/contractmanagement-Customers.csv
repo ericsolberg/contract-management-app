@@ -1,0 +1,5 @@
+ID,customerName,customerNumber,email,phone,creditRating,riskCategory,totalCreditLimit
+550e8400-e29b-41d4-a716-446655440001,"ACME Corporation","CUST001","contact@acme.com","+1-555-0101","AAA","LOW_RISK",1000000.00
+550e8400-e29b-41d4-a716-446655440002,"Global Tech Solutions","CUST002","info@globaltech.com","+1-555-0102","AA","STANDARD",750000.00
+550e8400-e29b-41d4-a716-446655440003,"Enterprise Dynamics","CUST003","admin@entdyn.com","+1-555-0103","A","STANDARD",500000.00
+550e8400-e29b-41d4-a716-446655440004,"Startup Innovations","CUST004","hello@startup.com","+1-555-0104","PENDING","HIGH_RISK",100000.00

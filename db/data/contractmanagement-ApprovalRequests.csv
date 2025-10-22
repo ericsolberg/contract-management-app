@@ -1,0 +1,3 @@
+ID,requestType,requestReason,requestedBy,approverEmail,status,approverComments,workflowInstance_ID
+550e8400-e29b-41d4-a716-446655440051,"CREDIT_CHECK_EXCLUSION","Low value contract with existing customer relationship","john.doe@company.com","manager@company.com","PENDING","",550e8400-e29b-41d4-a716-446655440044
+550e8400-e29b-41d4-a716-446655440052,"CREDIT_CHECK_EXCLUSION","Strategic partnership agreement","jane.smith@company.com","director@company.com","APPROVED","Approved based on strategic importance",550e8400-e29b-41d4-a716-446655440043
