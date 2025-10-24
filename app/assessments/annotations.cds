@@ -35,12 +35,28 @@ annotate service.CreditAssessments with @(
             },
         ],
     },
+    UI.FieldGroup #ProspectReportGroup : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Value : prospectReport,
+                Label : 'Prospect Report',
+            },
+        ],
+    },
     UI.Facets : [
         {
             $Type : 'UI.ReferenceFacet',
             ID : 'GeneratedFacet1',
             Label : 'General Information',
             Target : '@UI.FieldGroup#GeneratedGroup',
+        },
+        {
+            $Type : 'UI.ReferenceFacet',
+            ID : 'ProspectReportFacet',
+            Label : 'Prospect Report',
+            Target : '@UI.FieldGroup#ProspectReportGroup',
         },
     ],
     UI.LineItem : [
@@ -161,4 +177,3 @@ annotate service.CreditAssessments with {
         ],
     }
 };
-
