@@ -42,6 +42,7 @@ entity CreditAssessments : cuid, managed {
   creditStatus    : String(20) default 'PENDING';
   assessmentNotes : String(1000);
   approvedLimit   : Decimal(15,2);
+  prospectReport  : String;
   
   // Associations
   customer        : Association to Customers not null;

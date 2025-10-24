@@ -3,7 +3,13 @@
   "sap.app": {
     "id": "contractmanagement.contracts.contracts",
     "type": "application",
-    "i18n": "i18n/i18n.properties",
+    "i18n": {
+      "bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": [
+        "",
+        "en"
+      ]
+    },
     "applicationVersion": {
       "version": "0.0.1"
     },
@@ -61,7 +67,10 @@
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
           "bundleName": "contractmanagement.contracts.contracts.i18n.i18n",
-          "supportedLocales": ["", "en"],
+          "supportedLocales": [
+            "",
+            "en"
+          ],
           "fallbackLocale": "en"
         }
       },
@@ -76,7 +85,13 @@
       },
       "@i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
-        "uri": "i18n/i18n.properties"
+        "uri": "i18n/i18n.properties",
+        "settings": {
+          "supportedLocales": [
+            "",
+            "en"
+          ]
+        }
       }
     },
     "resources": {

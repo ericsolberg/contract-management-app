@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/JourneyRunner","contractmanagement/contracts/contracts/test/integration/pages/ValueContractsList","contractmanagement/contracts/contracts/test/integration/pages/ValueContractsObjectPage"],function(t,a,n){"use strict";var e=new t({launchUrl:sap.ui.require.toUrl("contractmanagement/contracts/contracts")+"/test/flpSandbox.html#contractmanagementcontractscon-tile",pages:{onTheValueContractsList:a,onTheValueContractsObjectPage:n},async:true});return e});
+//# sourceMappingURL=JourneyRunner.js.map

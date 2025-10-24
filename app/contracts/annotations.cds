@@ -127,3 +127,85 @@ annotate service.ValueContracts with {
     }
 };
 
+annotate service.SalesContracts with @(
+    UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Label : 'Sales Contract',
+            Value : SalesContract,
+        },
+        {
+            $Type : 'UI.DataField',
+            Label : 'Sales Contract Type',
+            Value : SalesContractType,
+        },
+        {
+            $Type : 'UI.DataField',
+            Label : 'Sales Organization',
+            Value : SalesOrganization,
+        },
+        {
+            $Type : 'UI.DataField',
+            Label : 'Sold To Party',
+            Value : SoldToParty,
+        },
+        {
+            $Type : 'UI.DataField',
+            Label : 'Creation Date',
+            Value : CreationDate,
+        },
+    ],
+    UI.FieldGroup #GeneralInformation : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Label : 'Sales Contract',
+                Value : SalesContract,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Sales Contract Type',
+                Value : SalesContractType,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Sales Organization',
+                Value : SalesOrganization,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Distribution Channel',
+                Value : DistributionChannel,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Organization Division',
+                Value : OrganizationDivision,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Sold To Party',
+                Value : SoldToParty,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Creation Date',
+                Value : CreationDate,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Created By User',
+                Value : CreatedByUser,
+            },
+        ],
+    },
+    UI.Facets : [
+        {
+            $Type : 'UI.ReferenceFacet',
+            ID : 'GeneralInformationFacet',
+            Label : 'General Information',
+            Target : '@UI.FieldGroup#GeneralInformation',
+        },
+    ]
+);

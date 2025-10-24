@@ -1,6 +1,8 @@
 using contractmanagement from '../db/schema';
+using { salescontract } from './external-services';
 
 service ContractManagementService {
+  // Existing entities
   
   @odata.draft.enabled
   entity Customers as projection on contractmanagement.Customers;
@@ -24,4 +26,14 @@ service ContractManagementService {
   action triggerInclusionDecision(contractId: UUID) returns String;
   action updateWorkflowStatus(contractId: UUID, status: String) returns String;
   action createCreditAssessment(contractId: UUID, assessmentData: String) returns String;
+
+  // New entities for Sales Contracts
+  @readonly
+  entity SalesContracts as projection on salescontract.SalesContracts;
+
+  @readonly
+  entity SalesContractItems as projection on salescontract.SalesContractItems;
+
+  // Action to fetch Sales Contracts from S/4HANA
+  action fetchSalesContracts() returns String;
 }

@@ -4,6 +4,7 @@
   "description": "A simple CAP project.",
   "dependencies": {
     "@sap/cds": "^9",
+    "@sap/cloud-sdk-vdm-sales-contract-service": "^2.1.0",
     "express": "^4"
   },
   "devDependencies": {
@@ -13,7 +14,7 @@
   "scripts": {
     "start": "cds-serve",
     "watch-customers": "cds watch --open contractmanagement.customers.customers/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-contracts": "cds watch --open contractmanagement.contracts.contracts/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "run-contracts": "cds run --port 4004",
     "watch-assessments": "cds watch --open contractmanagement.assessments.assessments/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
@@ -24,5 +25,31 @@
     "app/customers",
     "app/contracts",
     "app/assessments"
-  ]
+  ],
+  "cds": {
+    "build": {
+      "tasks": [
+        {
+          "for": "ui5-app",
+          "src": "app/contracts",
+          "dest": "app/contracts/dist",
+          "options": {
+            "ui5": {
+              "minify": true
+            }
+          }
+        }
+      ]
+    },
+    "requires": {
+      "ui5": {
+        "app/contracts": {
+          "serve": {
+            "path": "/contractmanagement.contracts.contracts",
+            "src": "app/contracts/dist"
+          }
+        }
+      }
+    }
+  }
 }
